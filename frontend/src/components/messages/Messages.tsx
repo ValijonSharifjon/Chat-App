@@ -7,7 +7,7 @@ import useListenMessages from "../../hooks/useListenMessages.ts";
 const Messages = () => {
     const { messages, loading } = useGetMessages();
     useListenMessages();
-    const lastMessageRef = useRef(null)
+    const lastMessageRef = useRef<any>(null)
 
     useEffect(() => {
         setTimeout(() => {

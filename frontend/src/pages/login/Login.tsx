@@ -8,7 +8,7 @@ const Login = () => {
     const [password, setPassword] = useState("");
 
     const {loading, login} = useLogin()
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e: any) => {
         e.preventDefault();
         await login(username, password)
     }

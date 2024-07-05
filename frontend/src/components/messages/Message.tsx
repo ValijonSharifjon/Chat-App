@@ -3,8 +3,8 @@ import useConversation from "../../zustand/useConversation.ts";
 import {extractTime} from "../../utils/extractTime.ts";
 
 const Message = ({message}: any) => {
-    const {authUser} = useAuthContext()
-    const {selectedConversation} = useConversation()
+    const {authUser}: any = useAuthContext()
+    const {selectedConversation}: any = useConversation()
     const fromMe = message.senderId === authUser._id
     const formattedTime = extractTime(message.createdAt)
     const chatClassName = fromMe ? 'chat-end' : 'chat-start';

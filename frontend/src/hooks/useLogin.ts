@@ -1,11 +1,10 @@
 import {useState} from "react";
 import toast from "react-hot-toast";
 import {useAuthContext} from "../context/AuthContext.tsx";
-import {SignUpInputsType} from "../pages/signup/SignUp.tsx";
 
 const useLogin = () => {
     const [loading, setLoading] = useState<boolean>(false);
-    const {setAuthUser} = useAuthContext()
+    const {setAuthUser}: any = useAuthContext()
     const login = async (username: string, password: string) => {
 
         const success = handleInputErrors(username, password);

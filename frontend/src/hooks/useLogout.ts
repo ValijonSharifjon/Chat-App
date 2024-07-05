@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 
 const useLogout = () => {
     const [loading, setLoading] = useState<boolean>(false);
-    const {setAuthUser} = useAuthContext()
+    const {setAuthUser}: any = useAuthContext()
 
     const logout = async () => {
         setLoading(true)
